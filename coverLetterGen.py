@@ -45,7 +45,7 @@ def generateCoverLetter(resumeText, jobTitle, companyName, jobDesc):
     
     
     
-st.title("📄 AI Cover Letter Generator")
+st.title("📄 Cover Letter Generator")
 
 uploadedFile = st.file_uploader("Upload your Resume (PDF or DOCX)", type=["pdf", "docx"])
 jobTitle = st.text_input("Job Title")

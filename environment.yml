@@ -1,50 +1,14 @@
-name: llms-apps
+name: cov-letter-gen
 channels:
   - conda-forge
   - defaults
 dependencies:
   - python=3.11
   - pip
-  - python-dotenv
-  - requests
-  - numpy
-  - pandas
-  - scipy
-  - pytorch
-  - jupyterlab
-  - ipywidgets
-  - matplotlib
-  - scikit-learn
-  - chromadb
-  - jupyter-dash
-  - sentencepiece
-  - pyarrow
-  - faiss-cpu
+  - streamlit
+  - spyder-kernels=3.0
   - pip:
-    - beautifulsoup4
-    - plotly
-    - bitsandbytes
-    - transformers
-    - sentence-transformers
-    - datasets
-    - accelerate
-    - openai
-    - anthropic
-    - google-generativeai
-    - gradio
-    - gensim
-    - modal
+    - pdfplumber
+    - docx2txt
     - ollama
-    - psutil
-    - setuptools
-    - speedtest-cli
-    - langchain
-    - langchain-core
-    - langchain-text-splitters
-    - langchain-openai
-    - langchain-chroma
-    - langchain-community
-    - faiss-cpu
-    - feedparser
-    - twilio
-    - pydub
+  
