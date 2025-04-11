@@ -69,28 +69,46 @@ This app uses **LLaMA 3.2**, running locally through [Ollama](https://ollama.com
    You should see the message:
    Ollama is running
    
-4. **If the server isn't running**, start it manually:
-- **macOS/Linux**:
-  ```bash
-  ollama serve
-  ```
-- **Windows (PowerShell)**:
-  ```powershell
-  ollama serve
-  ```
-
-4. **Download the LLaMA 3.2 model**:
-```bash
-ollama pull llama3.2
-```
-5. **Once the model is downloaded, your local LLaMA server will be ready to respond to AI generation requests at:
-   http://localhost:11434
+3. **If the server isn't running, start it manually in a terminal**:
+   
+    ```bash
+    ollama serve
+    ```
+  
+4. **Download the LLaMA 3.2 model in another terminal**:
+   
+    ```bash
+    ollama pull llama3.2
+    ```
+5. **Once the model is downloaded, your local LLaMA server will be ready to respond to AI generation requests at**:
+     http://localhost:11434
 
 ## Installation
 
-1. Clone the repository:
+1. **Clone the repository**:
+   
+     ```bash
+     git clone https://github.com/mohamedzeina/cover-letter-generator.git
+     cd cover-letter-generator
+     ```
+2. **Create the Conda environment** \
+    Make sure you have [Anaconda](https://www.anaconda.com/) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html) installed. \
+    Create the environment using the provided `environment.yaml` file:
+   
+    ```bash
+    conda env create -f environment.yaml
+    ```
+3. **Activate the environment**
+
+    ```bash
+    conda activate cov-letter-gen
+    ```
+4. **Run the Streamlit app**
+
    ```bash
-   git clone https://github.com/mohamedzeina/cover-letter-generator.git
-   cd cover-letter-generator
-   ```
+    streamlit run coverLetterGen.py
+    ```
+
+   
+   
    
