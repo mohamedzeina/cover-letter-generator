@@ -2,6 +2,8 @@
 
 Welcome to the **Cover Letter Generator** repository! This project is a lightweight, AI-powered web app that helps users create personalized, professional cover letters. By uploading a resume and entering job-specific details, the app generates a tailored cover letter using **LLaMA 3.2 running locally** — no internet or API keys required.
 
+![Screenshot](assets/screenshot.png)
+
 ## Table of Contents
 
 - [Features](#features)
