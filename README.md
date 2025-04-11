@@ -10,6 +10,7 @@ Welcome to the **Cover Letter Generator** repository! This project is a lightwei
 - [Tech Stack](#tech-stack)
 - [Architecture](#architecture)
 - [Installation](#installation)
+- [LLaMA 3.2 Setup via Ollama](#LLaMA-3.2-Setup-via-Ollama)
 
 ## Features
 
@@ -50,6 +51,40 @@ This project follows a modular architecture:
 - **Resume Parser:** Extracts raw text from uploaded files.
 - **Prompt Engine:** Constructs structured prompts for LLaMA.
 - **LLM Backend:** LLaMA 3.2 handles natural language generation locally.
+
+## LLaMA 3.2 Setup via Ollama
+
+This app uses **LLaMA 3.2**, running locally through [Ollama](https://ollama.com), allowing fast, private, and offline AI generation — no API keys required.
+
+### Steps to Install LLaMA Locally
+
+1. **Install Ollama**  
+   Visit [https://ollama.com](https://ollama.com) and download the installer for your operating system (macOS, Windows, or Linux).
+
+2. **Start the Ollama Server**  
+   After installation, the server typically starts automatically.  
+   To confirm, open your browser and go to:  
+   [http://localhost:11434](http://localhost:11434)
+
+   You should see the message:
+   Ollama is running
+   
+4. **If the server isn't running**, start it manually:
+- **macOS/Linux**:
+  ```bash
+  ollama serve
+  ```
+- **Windows (PowerShell)**:
+  ```powershell
+  ollama serve
+  ```
+
+4. **Download the LLaMA 3.2 model**:
+```bash
+ollama pull llama3.2
+```
+5. **Once the model is downloaded, your local LLaMA server will be ready to respond to AI generation requests at:
+   http://localhost:11434
 
 ## Installation
 
