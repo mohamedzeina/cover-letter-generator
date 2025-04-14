@@ -54,10 +54,15 @@ jobDesc = st.text_area("Paste the Job Description")
 
 if st.button("Generate Cover Letter"):
     if uploadedFile and jobTitle and companyName and jobDesc:
-        resumeText = extractText(uploadedFile)
-        coverLetter = generateCoverLetter(resumeText, jobTitle, companyName, jobDesc)
-        st.subheader("📬 Your Cover Letter")
+        with st.spinner("Generating cover letter... this might take a moment ⏳"):
+            try:
+                resumeText = extractText(uploadedFile)
+                coverLetter = generateCoverLetter(resumeText, jobTitle, companyName, jobDesc)
+                st.subheader("📬 Your Cover Letter")
+                
+                st.code(coverLetter, language="markdown")
+            except Exception as e:
+                st.error(f"Something went wrong during generation: {e}")         
         
-        st.text_area("Generated Letter", coverLetter, height=300)
     else:
         st.error("Please fill in all fields and upload your resume.")
